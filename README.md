@@ -4,7 +4,7 @@
   
  1. Clone the repository 
   
- ### git clone https://github.com/ebubekirkarakurt/react_project.git 
+  `git clone https://github.com/ebubekirkarakurt/react_project.git`
   
   
  2. Change the working directory 
