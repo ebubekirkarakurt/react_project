@@ -4,31 +4,26 @@
   
  1. Clone the repository 
   
- bash 
- git clone https://github.com/ebubekirkarakurt/react_project.git 
+ ### git clone https://github.com/ebubekirkarakurt/react_project.git 
   
   
  2. Change the working directory 
   
- bash 
- cd react_project
+### cd react_project
   
   
  3. Install dependencies 
   
- bash 
- npm install 
+### npm install 
 
  4. Get Db
   
- bash 
- cd react_project
- json-server --watch db.json 
+###  1-> cd react_project
+### 2-> json-server --watch db.json 
   
  5. Run the app 
-  
- bash 
- npm start 
+   
+ ### npm start 
 
  
  🌟 You are all set!
