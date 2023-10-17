@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
-export default class Navi extends Component {
+export default class CategoryList extends Component {
   state = {
     categories: []
   };
@@ -21,10 +21,10 @@ export default class Navi extends Component {
   render() {
     return (
       <div>
-        <h3>Navi component</h3>
+        <h3>Category List</h3>
         <ListGroup>
           {this.state.categories.map((category) => (
-            <ListGroupItem
+            <ListGroupItem active={category.categoryName === this.props.currentcategory?true:false}
               onClick={() => this.props.changeCategory(category)}
               key={category.id}
             >
