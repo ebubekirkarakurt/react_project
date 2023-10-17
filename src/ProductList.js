@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Table, Button } from "reactstrap";
+import { useSearchParams } from "react-router-dom";
+
 
 export default class ProductList extends Component {
   render() {

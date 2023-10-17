@@ -1,46 +1,39 @@
 import React, { Component } from "react";
-import { Table } from "reactstrap";
+import { Table, Button } from "reactstrap";
 
 export default class CartList extends Component {
-
   render() {
     return (
       <div>
-        <p>Naber - </p>
-        <div>
-        {this.props.addCart.foreach(element => (
-            <p>{element.product.productName}</p>
-              ))}
-        </div>
-        <Table>
-          <thead>++
+
+        <Table striped>
+          <thead>
             <tr>
               <th>#</th>
+              <th>Category Id</th>
               <th>Product Name</th>
-              <th>Quantity PerUnit</th>
               <th>Unit Price</th>
               <th>Units In Stock</th>
-              <th>Add</th>
+              <th>Quantity</th>
+              <th>Remove</th>
             </tr>
           </thead>
           <tbody>
-
-            {/* {this.props.cart.map((cartItem) => (
-              
+            {this.props.cart.map((cartItem) => (
               <tr key={cartItem.product.id}>
                 <td>{cartItem.product.id}</td>
+                <td>{cartItem.product.categoryId}</td>
                 <td>{cartItem.product.productName}</td>
-                <td>{cartItem.product.quantityPerUnit}</td>
                 <td>{cartItem.product.unitPrice}</td>
                 <td>{cartItem.product.unitsInStock}</td>
-                <td>{cartItem.product.quantity}</td>
+                <td>{cartItem.quantity}</td>
+                <td>
+                  <Button onClick={()=>this.props.removeFromCart(cartItem.product)} color="danger"> Remove From Cart </Button>
+                </td>
               </tr>
-              
-            ))} */}
+            ))}
           </tbody>
-           
         </Table>
-        
       </div>
     );
   }

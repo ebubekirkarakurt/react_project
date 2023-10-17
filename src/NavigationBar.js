@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav
-} from 'reactstrap';
-import CartSummary from './CartSummary';
+import React, { useState } from "react";
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from "reactstrap";
+import CartSummary from "./CartSummary";
+import { Link } from "react-router-dom";
 
 function NavigationBar(props) {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +15,10 @@ function NavigationBar(props) {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
-            <CartSummary removeFromCart={props.removeFromCart} cart = {props.cart}/>
+            <CartSummary
+              removeFromCart={props.removeFromCart}
+              cart={props.cart}
+            />
           </Nav>
         </Collapse>
       </Navbar>
